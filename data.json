@@ -1,0 +1,54 @@
+[
+  {
+    "taskName": "Requirements",
+    "startDate": "02.04.2016",
+    "endDate": "04.04.2016"
+  },
+  {
+    "taskName": "Setup",
+    "startDate": "04.04.2016",
+    "endDate": "16.04.2016"
+  },
+  {
+    "taskName": "Development",
+    "startDate": "04.04.2016",
+    "endDate": "25.04.2016"
+  },
+  {
+    "taskName": "Testing",
+    "startDate": "25.04.2016",
+    "endDate": "30.04.2016",
+    "subtasks": [
+      {
+        "taskName": "Integration Tests",
+        "startDate": "25.04.2016",
+        "endDate": "27.04.2016"
+      },
+      {
+        "taskName": "Customer Tests",
+        "startDate": "27.04.2016",
+        "endDate": "30.04.2016"
+      }
+    ]
+  },
+  {
+    "taskName": "Deployment",
+    "startDate": "30.04.2016",
+    "endDate": "01.05.2016"
+  },
+  {
+    "taskName": "Training",
+    "startDate": "01.05.2016",
+    "endDate": "09.05.2016"
+  },
+  {
+    "taskName": "Support",
+    "startDate": "09.05.2016",
+    "endDate": "28.05.2016"
+  },
+  {
+    "taskName": "Project Management",
+    "startDate": "02.04.2016",
+    "endDate": "28.05.2016"
+  }
+]

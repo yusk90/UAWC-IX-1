@@ -1,0 +1,131 @@
+body {
+    margin: 30px;
+    font-family: sans-serif;
+}
+
+.chart {
+    min-width: 540px;
+    margin: -30px 0 0;
+    overflow: hidden;
+}
+
+.chart::before {
+    content: "";
+    position: relative;
+    z-index: 50;
+    display: block;
+    height: 75px;
+    background: #fff;
+}
+
+.chart__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chart__cell {
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+}
+
+.chart__task-cell {
+    width: 50px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: right;
+}
+
+.chart__task,
+.chart__scale {
+    position: relative;
+    height: 25px;
+}
+
+.chart__task {
+    z-index: 100;
+    cursor: pointer;
+}
+
+.chart__scale {
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.chart__subtask {
+    position: relative;
+    float: left;
+    height: 25px;
+}
+
+.chart__date {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.chart__date:first-child {
+    transform: none;
+}
+
+.chart__date:last-child {
+    transform: translateX(-100%);
+}
+
+.chart__date::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 31px;
+    width: 1px;
+    height: 1000px;
+    background: #ededed;
+}
+
+.chart__date:first-child::after {
+    left: 0;
+}
+
+.chart__date:last-child::after {
+    left: auto;
+    right: 0;
+}
+
+[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    padding: 3px 7px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: #333;
+    border-radius: 4px;
+    transform: translateX(-50%) translateY(-30px);
+}
+
+[data-title]:hover::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 -4px;
+    border-top: 5px solid #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+@media screen and (max-width: 900px) {
+
+    .chart__date:nth-child(odd) {
+        top: 0;
+        line-height: 1;
+    }
+
+    .chart__date:nth-child(even) {
+        bottom: 0;
+        line-height: 1;
+    }
+}
